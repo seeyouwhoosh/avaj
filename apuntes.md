@@ -201,3 +201,32 @@ Talla t = Talla.valueOf(texto); // Convierte a Talla.GRANDE
 La idea es igual que en todas partes, como C++.
 
 Lo único aquí es que para instanciarlo siempre se usa `new` y no hay copy operator direcmente. Y también hay garbage collector, basta con asignarlo a `null` el objeto
+
+#### Modificadores de acceso
+
+Se añade que existe `default`, que se extiende solo al mismo paquete; y que `protected` también se extiende al mismo paquete
+
+ | Modificador | Misma Clase | Mismo Paquete | Subclase (otro paquete) | Mundo  | (Todo)
+ |  ---  |  ---  |  ---  |  ---  |  ---  | --- |
+ | public | ✅ | ✅ | ✅ | ✅ | 
+ | protected | ✅ | ✅ | ✅ | ❌ | 
+ | Default | ✅ | ✅ | ❌ | ❌ | 
+ | private | ✅ | ❌ | ❌ | ❌  |
+
+#### Estructuras estáticas
+* Variables de clase, no de instancia, luego se pueden acceder sin ninguna instancia de clase
+* Métodos.
+* Variables constantes se escriben con `final`
+
+#### Herencias
+* Se usa `extends`: `public class Hijo extends Padre`
+* Para hacer referencia al padre, `super`
+  > **Nota**: Al constructor del hijo hay que llamar también al del padre
+* Una subclase solo puede heredar de una clase
+* Lowkey, TODO es una clase, literalmente. Pensaba que estaba exagerando un poco cuando lo pensé. No. Incluso las clases que creas por primera vez, que no extienden a nada, extienden de la clase **Object** de `java.lang.Object`. Métodos heredados:
+  * `toString();`
+  * `equals(Object obj);` (Compara referencias, pero lo podemos sobreescribir)
+  * `hashCode();` (No es único)
+  * `getClass();`
+* Para las **clases abstractas**, la implementación de funciones abstractas, se puede poner `@override` antes de la función para que el compilador lo compruebe y evitar errores en runtime.
+* Las clases abstractas pueden servir para guardar la referencia de un hijo, like: `Animal miMascota = new Perro("Firulais");`
