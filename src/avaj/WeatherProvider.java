@@ -1,3 +1,5 @@
+package avaj;
+
 public class WeatherProvider {
 	private String[] weather;
 
