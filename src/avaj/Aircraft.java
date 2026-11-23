@@ -15,4 +15,7 @@ public class Aircraft extends Flyable {
 		;
 	}
 
+	public String toString() {
+		return getClass().getSimpleName() + "#" + name + "(" + id + ")";
+	}
 }
