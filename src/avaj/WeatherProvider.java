@@ -4,7 +4,7 @@ public class WeatherProvider {
 	private String[] weather = {"RAIN", "SNOW", "SUN", "FOG"};
 
 	private static final WeatherProvider WEATHER_PROVIDER = new WeatherProvider();
-
+	
 	private WeatherProvider() {}
 
 	public static WeatherProvider getInstance() {

@@ -18,7 +18,7 @@ public class Main {
 			error("Wrong format");
 		}
 		type = sc.next();
-		if (type != "Helicopter" || type != "JetPlane" || type != "Balloon") {
+		if (type.compareTo("Helicopter") != 0 && type.compareTo("JetPlane") != 0 && type.compareTo("Balloon") != 0) {
 			return false;
 		}
 		if (!sc.hasNext()) {
@@ -29,22 +29,31 @@ public class Main {
 			error("Wrong format");
 		}
 		longitude = sc.nextInt();
+		if (longitude < 0)
+			error("Only positive numbers");
 		if (!sc.hasNextInt()) {
 			error("Wrong format");
 		}
 		latitude = sc.nextInt();
+		if (latitude < 0)
+			error("Only positive numbers");
 		if (!sc.hasNextInt()) {
 			error("Wrong format");
 		}
 		height = sc.nextInt();
+		if (height < 0)
+			error("Only positive numbers");
 		if (height > 100) {
 			height = 100;
 		}
-		else if (0 < height) {
-			height = 0;
-		}
+		if (sc.hasNextLine())
+			error("Invalid token");
 	
-		flyables.add(AircraftFactory.getInstance().newAircraft(type, name, new Coordinates(longitude, latitude, height)));
+		Flyable fly = AircraftFactory.getInstance().newAircraft(type, name, new Coordinates(longitude, latitude, height));
+		if (fly == null) {
+			error("Not an aircraft");
+		}
+		flyables.add(fly);
 
 		return true;
 	}
@@ -80,7 +89,8 @@ public class Main {
 	private static ArrayList<Flyable> enlistAircrafts(Scanner scanner) {
 		ArrayList<Flyable> flyables = new ArrayList<>();
 		String line;
-		while (!(line = scanner.nextLine()).isEmpty()) {
+		while (scanner.hasNextLine()) {
+			line = scanner.nextLine();
 			Scanner tokensScanner = new Scanner(line);
 
 			if (!createAircraft(tokensScanner, flyables)) {
@@ -103,9 +113,8 @@ public class Main {
 		}
 
 		Scanner scanner = fileOpener(args);
-		String line = scanner.next();
+		String line = scanner.nextLine();
 		if (!line.isEmpty()) {
-			System.out.println(line);
 			error("First line shouldn\'t contain more than the number of simulation runs");
 		}
 		ArrayList<Flyable> flyables = enlistAircrafts(scanner);

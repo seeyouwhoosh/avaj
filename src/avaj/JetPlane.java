@@ -11,6 +11,7 @@ public class JetPlane extends Aircraft {
 		int latitude = coordinates.getLatitude();
 		int height = coordinates.getHeight();
 
+		System.out.printf("%s: ", this.toString());
 		switch (weather) {
 			case "SUN":
 				latitude += 10;
@@ -31,6 +32,13 @@ public class JetPlane extends Aircraft {
 				break;
 			default:
 				break;
+		}
+		if (height > 100)
+			height = 100;
+		else if (height <= 0) {
+			height = 0;
+			System.out.println(this.toString() + " landing");
+			this.unregisterTower();
 		}
 		coordinates = new Coordinates(longitude, latitude, height);
 	}

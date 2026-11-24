@@ -10,14 +10,17 @@ public class Coordinates {
 		this.latitude = p_latitude;
 		this.height = p_height;
 	}
+	Coordinates(Coordinates p_coordinates) {
+		this.longitude = p_coordinates.longitude;
+		this.latitude = p_coordinates.latitude;
+		this.height = p_coordinates.height;
+	}
+
 	public int getLongitude() { return longitude; }
 	public int getLatitude() { return latitude; }
 	public int getHeight() { return height; }
 
-	public Coordinates copy(Coordinates other) {
-		this.longitude = other.longitude;
-		this.latitude = other.latitude;
-		this.height = other.height;
-		return this;
+	public String toString() {
+		return "(" + this.longitude + ", " + this.latitude + ", " + this.height + ")";
 	}
 }
