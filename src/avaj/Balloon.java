@@ -6,6 +6,32 @@ public class Balloon extends Aircraft {
 	}
 
 	public void updateConditions() {
-		;
+		String weather = weatherTower.getWeather(coordinates);
+		int longitude = coordinates.getLongitude();
+		int latitude = coordinates.getLatitude();
+		int height = coordinates.getHeight();
+
+		switch (weather) {
+			case "SUN":
+				longitude += 2;
+				height += 4;
+				System.out.println("Let's enjoy the good weather and take some pics.");
+				break;
+			case "RAIN":
+				height -= 5;
+				System.out.println("Damn you rain! You messed up my balloon.");
+				break;
+			case "FOG":
+				height -= 3;
+				System.out.println("I can't see anything...");
+				break;
+			case "SNOW":
+				height -= 15;
+				System.out.println("It's snowing. We're gonna crash");
+				break;
+			default:
+				break;
+		}
+		coordinates = new Coordinates(longitude, latitude, height);
 	}
 }

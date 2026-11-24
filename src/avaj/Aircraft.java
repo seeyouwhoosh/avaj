@@ -11,9 +11,7 @@ public class Aircraft extends Flyable {
 		this.coordinates.copy(p_coordinates);
 	}
 
-	public void updateConditions() {
-		;
-	}
+	public void updateConditions() {}
 
 	public String toString() {
 		return getClass().getSimpleName() + "#" + name + "(" + id + ")";
