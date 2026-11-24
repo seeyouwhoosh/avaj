@@ -1,8 +1,8 @@
 package avaj;
 
-import java.io.File;
-import java.util.ArrayList;
 import java.util.Scanner;
+import java.util.ArrayList;
+import java.io.File;
 
 public class Main {
 	private static int simulationRuns = 0;
@@ -55,7 +55,7 @@ public class Main {
 	}
 
 	private static Scanner fileOpener(String[] args) {
-		File file = new File(args[1]);
+		File file = new File(args[0]);
 		if (!file.exists() || !file.isFile() || !file.canRead() || file.length() == 0) {
 			error("Invalid file");
 		}
@@ -91,23 +91,21 @@ public class Main {
 		return flyables;
 	}
 
-	private static void runSimulation() {
-	
+	private static void runSimulation(WeatherTower tower) {
 		for (long i = 0; i < simulationRuns; i++) {
-
+			tower.conditionChanged();
 		}
-
 	}
 
 	public static void main(String[] args) {
-
-		if (args.length != 2) {
+		if (args.length != 1) {
 			error("Invalid arguments");
 		}
 
 		Scanner scanner = fileOpener(args);
 		String line = scanner.next();
 		if (!line.isEmpty()) {
+			System.out.println(line);
 			error("First line shouldn\'t contain more than the number of simulation runs");
 		}
 		ArrayList<Flyable> flyables = enlistAircrafts(scanner);
@@ -118,6 +116,6 @@ public class Main {
 			fly.registerTower(tower);
 		}
 
-		runSimulation();
+		runSimulation(tower);
 	}
 }
