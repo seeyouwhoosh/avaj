@@ -10,6 +10,10 @@ public abstract class Flyable {
 		weatherTower = p_tower;
 	}
 
+	public void writeLog(String msg) {
+		this.weatherTower.writeLog(msg);
+	}
+
 	public void unregisterTower() {
 		weatherTower.unregister(this);
 		weatherTower = null;

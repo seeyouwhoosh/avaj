@@ -12,24 +12,29 @@ public class Balloon extends Aircraft {
 		int latitude = coordinates.getLatitude();
 		int height = coordinates.getHeight();
 
-		System.out.printf("%s", this.toString());
+		if (height == 0) {
+			this.writeLog(this.toString() + " is on land\n");
+			this.unregisterTower();
+			return;
+		}
+
 		switch (weather) {
 			case "SUN":
 				longitude += 2;
 				height += 4;
-				System.out.println(": Let's enjoy the good weather and take some pics.");
+				this.writeLog(this.toString() + ": Let's enjoy the good weather and take some pics.\n");
 				break;
 			case "RAIN":
 				height -= 5;
-				System.out.println(": Damn you rain! You messed up my balloon.");
+				this.writeLog(this.toString() + ": Damn you rain! You messed up my balloon.\n");
 				break;
 			case "FOG":
 				height -= 3;
-				System.out.println(": I can't see anything...");
+				this.writeLog(this.toString() + ": I can't see anything...\n");
 				break;
 			case "SNOW":
 				height -= 15;
-				System.out.println(": It's snowing. We're gonna crash");
+				this.writeLog(this.toString() + ": It's snowing. We're gonna crash\n");
 				break;
 			default:
 				break;
@@ -38,7 +43,7 @@ public class Balloon extends Aircraft {
 			height = 100;
 		else if (height <= 0) {
 			height = 0;
-			System.out.println(this.toString() + " landing");
+			this.writeLog(this.toString() + " landing\n");
 			this.unregisterTower();
 		}
 		coordinates = new Coordinates(longitude, latitude, height);

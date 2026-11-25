@@ -12,24 +12,29 @@ public class JetPlane extends Aircraft {
 		int latitude = coordinates.getLatitude();
 		int height = coordinates.getHeight();
 
-		System.out.printf("%s: ", this.toString());
+		if (height == 0) {
+			this.writeLog(this.toString() + " is on land\n");
+			this.unregisterTower();
+			return;
+		}
+
 		switch (weather) {
 			case "SUN":
 				latitude += 10;
 				height += 2;
-				System.out.println("I like sunny days");
+				this.writeLog(this.toString() + ": I like sunny days\n");
 				break;
 			case "RAIN":
 				latitude += 5;
-				System.out.println("It's raining. Better watch out for lightings.");
+				this.writeLog(this.toString() + ": It's raining. Better watch out for lightings.\n");
 				break;
 			case "FOG":
 				latitude +=1;
-				System.out.println("Good thing I don't care.");
+				this.writeLog(this.toString() + ": Good thing I don't care.\n");
 				break;
 			case "SNOW":
 				height -= 7;
-				System.out.println("OMG! Winter is coming!");
+				this.writeLog(this.toString() + ": OMG! Winter is coming!\n");
 				break;
 			default:
 				break;
@@ -38,7 +43,7 @@ public class JetPlane extends Aircraft {
 			height = 100;
 		else if (height <= 0) {
 			height = 0;
-			System.out.println(this.toString() + " landing");
+			this.writeLog(this.toString() + " landing\n");
 			this.unregisterTower();
 		}
 		coordinates = new Coordinates(longitude, latitude, height);

@@ -12,24 +12,29 @@ public class Helicopter extends Aircraft {
 		int latitude = coordinates.getLatitude();
 		int height = coordinates.getHeight();
 
-		System.out.printf("%s: ", this.toString());
+		if (height == 0) {
+			this.writeLog(this.toString() + " is on land\n");
+			this.unregisterTower();
+			return;
+		}
+
 		switch (weather) {
 			case "SUN":
 				longitude += 10;
 				height += 2;
-				System.out.println("This is hot.");
+				this.writeLog(this.toString() + ": This is hot.\n");
 				break;
 			case "RAIN":
 				longitude += 5;
-				System.out.println("I should have implemented windshields.");
+				this.writeLog(this.toString() + ": I should have implemented windshields.\n");
 				break;
 			case "FOG":
 				longitude +=1;
-				System.out.println("I have powerful lights.");
+				this.writeLog(this.toString() + ": I have powerful lights.\n");
 				break;
 			case "SNOW":
 				height -= 12;
-				System.out.println("My rotor is going to freeze!");
+				this.writeLog(this.toString() + ": My rotor is going to freeze!\n");
 				break;
 			default:
 				break;
@@ -38,7 +43,7 @@ public class Helicopter extends Aircraft {
 			height = 100;
 		else if (height <= 0) {
 			height = 0;
-			System.out.println(this.toString() + " landing");
+			this.writeLog(this.toString() + " landing\n");
 			this.unregisterTower();
 		}
 		coordinates = new Coordinates(longitude, latitude, height);

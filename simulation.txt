@@ -1,0 +1,126 @@
+Tower says: Balloon#B1(1) registered to weather tower
+Tower says: Balloon#B2(2) registered to weather tower
+Tower says: JetPlane#J1(3) registered to weather tower
+Tower says: Helicopter#H1(4) registered to weather tower
+Tower says: Helicopter#H2(5) registered to weather tower
+Tower says: Helicopter#H3(6) registered to weather tower
+Tower says: Balloon#B3(7) registered to weather tower
+Tower says: JetPlane#J2(8) registered to weather tower
+Tower says: Helicopter#H4(9) registered to weather tower
+Balloon#B1(1) is on land
+Tower says: Balloon#B1(1) unregistered from weather tower
+Balloon#B2(2): I can't see anything...
+JetPlane#J1(3): Good thing I don't care.
+Helicopter#H1(4): I have powerful lights.
+Helicopter#H2(5): I have powerful lights.
+Helicopter#H3(6): My rotor is going to freeze!
+Balloon#B3(7): Let's enjoy the good weather and take some pics.
+JetPlane#J2(8): I like sunny days
+Helicopter#H4(9): I should have implemented windshields.
+Balloon#B2(2): Damn you rain! You messed up my balloon.
+JetPlane#J1(3): It's raining. Better watch out for lightings.
+Helicopter#H1(4): I should have implemented windshields.
+Helicopter#H2(5): I should have implemented windshields.
+Helicopter#H3(6): My rotor is going to freeze!
+Balloon#B3(7): Damn you rain! You messed up my balloon.
+JetPlane#J2(8): It's raining. Better watch out for lightings.
+Helicopter#H4(9): My rotor is going to freeze!
+Balloon#B2(2): I can't see anything...
+JetPlane#J1(3): OMG! Winter is coming!
+Helicopter#H1(4): My rotor is going to freeze!
+Helicopter#H2(5): My rotor is going to freeze!
+Helicopter#H3(6): My rotor is going to freeze!
+Balloon#B3(7): I can't see anything...
+JetPlane#J2(8): OMG! Winter is coming!
+Helicopter#H4(9): My rotor is going to freeze!
+Balloon#B2(2): Damn you rain! You messed up my balloon.
+JetPlane#J1(3): I like sunny days
+Helicopter#H1(4): My rotor is going to freeze!
+Helicopter#H1(4) landing
+Tower says: Helicopter#H1(4) unregistered from weather tower
+Helicopter#H2(5): My rotor is going to freeze!
+Helicopter#H3(6): My rotor is going to freeze!
+Balloon#B3(7): Damn you rain! You messed up my balloon.
+JetPlane#J2(8): I like sunny days
+Helicopter#H4(9): My rotor is going to freeze!
+Balloon#B2(2): I can't see anything...
+JetPlane#J1(3): I like sunny days
+Helicopter#H2(5): My rotor is going to freeze!
+Helicopter#H3(6): My rotor is going to freeze!
+Balloon#B3(7): I can't see anything...
+JetPlane#J2(8): I like sunny days
+Helicopter#H4(9): My rotor is going to freeze!
+Balloon#B2(2): Damn you rain! You messed up my balloon.
+JetPlane#J1(3): I like sunny days
+Helicopter#H2(5): My rotor is going to freeze!
+Helicopter#H2(5) landing
+Tower says: Helicopter#H2(5) unregistered from weather tower
+Helicopter#H3(6): My rotor is going to freeze!
+Balloon#B3(7): Damn you rain! You messed up my balloon.
+JetPlane#J2(8): I like sunny days
+Helicopter#H4(9): My rotor is going to freeze!
+Helicopter#H4(9) landing
+Tower says: Helicopter#H4(9) unregistered from weather tower
+Balloon#B2(2): I can't see anything...
+JetPlane#J1(3): I like sunny days
+Helicopter#H3(6): My rotor is going to freeze!
+Balloon#B3(7): I can't see anything...
+JetPlane#J2(8): I like sunny days
+Balloon#B2(2): Damn you rain! You messed up my balloon.
+JetPlane#J1(3): I like sunny days
+Helicopter#H3(6): My rotor is going to freeze!
+Balloon#B3(7): Damn you rain! You messed up my balloon.
+JetPlane#J2(8): OMG! Winter is coming!
+Balloon#B2(2): I can't see anything...
+JetPlane#J1(3): I like sunny days
+Helicopter#H3(6): My rotor is going to freeze!
+Helicopter#H3(6) landing
+Tower says: Helicopter#H3(6) unregistered from weather tower
+Balloon#B3(7): I can't see anything...
+JetPlane#J2(8): I like sunny days
+Balloon#B2(2): Damn you rain! You messed up my balloon.
+JetPlane#J1(3): I like sunny days
+Balloon#B3(7): Damn you rain! You messed up my balloon.
+JetPlane#J2(8): I like sunny days
+Balloon#B2(2): I can't see anything...
+JetPlane#J1(3): I like sunny days
+Balloon#B3(7): I can't see anything...
+Balloon#B3(7) landing
+Tower says: Balloon#B3(7) unregistered from weather tower
+JetPlane#J2(8): I like sunny days
+Balloon#B2(2): Damn you rain! You messed up my balloon.
+JetPlane#J1(3): I like sunny days
+JetPlane#J2(8): I like sunny days
+Balloon#B2(2): I can't see anything...
+JetPlane#J1(3): I like sunny days
+JetPlane#J2(8): OMG! Winter is coming!
+Balloon#B2(2): Damn you rain! You messed up my balloon.
+JetPlane#J1(3): I like sunny days
+JetPlane#J2(8): I like sunny days
+Balloon#B2(2): I can't see anything...
+JetPlane#J1(3): I like sunny days
+JetPlane#J2(8): I like sunny days
+Balloon#B2(2): Damn you rain! You messed up my balloon.
+JetPlane#J1(3): I like sunny days
+JetPlane#J2(8): I like sunny days
+Balloon#B2(2): I can't see anything...
+Balloon#B2(2) landing
+Tower says: Balloon#B2(2) unregistered from weather tower
+JetPlane#J1(3): I like sunny days
+JetPlane#J2(8): I like sunny days
+JetPlane#J1(3): I like sunny days
+JetPlane#J2(8): OMG! Winter is coming!
+JetPlane#J1(3): I like sunny days
+JetPlane#J2(8): I like sunny days
+JetPlane#J1(3): I like sunny days
+JetPlane#J2(8): I like sunny days
+JetPlane#J1(3): I like sunny days
+JetPlane#J2(8): I like sunny days
+JetPlane#J1(3): I like sunny days
+JetPlane#J2(8): I like sunny days
+JetPlane#J1(3): I like sunny days
+JetPlane#J2(8): OMG! Winter is coming!
+JetPlane#J1(3): I like sunny days
+JetPlane#J2(8): I like sunny days
+JetPlane#J1(3): I like sunny days
+JetPlane#J2(8): I like sunny days

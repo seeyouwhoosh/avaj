@@ -14,7 +14,7 @@ compile:
 	javac -d $(BUILD_DIR) @sources.txt
 
 run:
-	java -cp $(BUILD_DIR) avaj.Main $(ARGS)
+	java -cp $(BUILD_DIR) avaj.Main scenario.txt
 
 clean:
 	rm -rf $(BUILD_DIR)
