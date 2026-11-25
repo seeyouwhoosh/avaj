@@ -6,6 +6,8 @@ BUILD_DIR = target
 
 SOURCES = $(shell find $(SRC_DIR) -name "*.java")
 
+SCENARIO ?= scenario.txt
+
 all: compile run
 
 compile:
@@ -14,9 +16,14 @@ compile:
 	javac -d $(BUILD_DIR) @sources.txt
 
 run:
-	java -cp $(BUILD_DIR) avaj.Main scenario.txt
+	@if [ ! -d target ] || [ ! -d target/avaj ]; then\
+		echo "Some files are unfound, try compiling: 'make compile'";\
+		exit 1;\
+	fi
+	java -cp $(BUILD_DIR) avaj.Main $(SCENARIO)
 
 clean:
 	rm -rf $(BUILD_DIR)
 	rm -f simulation.txt
+	rm -f sources.txt
 
