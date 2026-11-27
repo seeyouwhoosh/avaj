@@ -5,9 +5,8 @@ import java.util.ArrayList;
 import java.io.File;
 import java.io.FileWriter;
 
-import avaj.exception.InvalidFormatException;
-import avaj.exception.InvalidTokenException;
-import avaj.exception.NegativeNumberException;
+import avaj.exception.*;
+
 
 public class Main {
 	private static int simulationRuns = 0;
