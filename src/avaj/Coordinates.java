@@ -1,11 +1,16 @@
 package avaj;
 
+import avaj.exception.*;
+
 public class Coordinates {
 	private int longitude;
 	private int latitude;
 	private int height;
 
-	Coordinates(int p_longitude, int p_latitude, int p_height) {
+	Coordinates(int p_longitude, int p_latitude, int p_height) throws NegativeNumberException {
+		if (p_latitude < 0 || p_longitude < 0 || p_height < 0) {
+			throw new NegativeNumberException("Coordinates");
+		}
 		this.longitude = p_longitude;
 		this.latitude = p_latitude;
 		this.height = p_height;

@@ -230,3 +230,39 @@ Se añade que existe `default`, que se extiende solo al mismo paquete; y que `pr
   * `getClass();`
 * Para las **clases abstractas**, la implementación de funciones abstractas, se puede poner `@override` antes de la función para que el compilador lo compruebe y evitar errores en runtime.
 * Las clases abstractas pueden servir para guardar la referencia de un hijo, like: `Animal miMascota = new Perro("Firulais");`
+  * Si se quiere hace al revés, downcasting. Si no estamos seguros de si es la clase que creemos que es, hacer un `instance of Subclase` check.
+
+### Interfaces
+* Se usa `implements`, posible implementar varias. Es para definir el comportamiento de una clase.
+* Implícitamente `public abstract`. SOLO variables constantes, no se instancia, etc
+
+### Records
+`public record Producto(String nombre, double precio) { }`
+* Similar a los structs en C++, kinda...
+* Well, tiene un constructor-
+* Atributos inmutables (final)
+* Getters son el nombre de los atributos
+* Puedes añadir métodos y llamar a un constructor compacto personalizado
+
+## Exceptions
+```java
+public class CustomException extends Exception {
+    public CustomException(String mensaje) {
+        super(mensaje);
+    }
+}
+```
+* **Exception**: evento previsible, like, yeah, won't let you compile if that's an error
+* **RuntimeException**: estado irrecuperable, idk. El compilador lo ignora, hasta el runtime... Ejemplos: NullPointer, IndexOutOfBounds.
+* "handle or declare": poner dentro de la función un try-catch ó avisar que tu método puede fallar:
+    ```java
+    public void leerFichero() throws FileNotFoundException {
+    FileReader fr = new FileReader(new File("notas.txt"));
+    }
+    
+    ```
+
+### try-catch
+* `finally`: al final del bloque para cerrar cosas, liberar cosas, etc. Alternativa, poner paréntesis a lo que se va a cerrar en el bloque try
+* Múltiples excepciones: por orden de especifidad ascendiente
+* Multicatch: `|`

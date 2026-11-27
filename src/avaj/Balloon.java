@@ -46,6 +46,12 @@ public class Balloon extends Aircraft {
 			this.writeLog(this.toString() + " landing\n");
 			this.unregisterTower();
 		}
-		coordinates = new Coordinates(longitude, latitude, height);
+
+		try {
+			coordinates = new Coordinates(longitude, latitude, height);
+		} catch (Exception e) {
+			e.printStackTrace(System.out);
+			System.exit(1);
+		}
 	}
 }
