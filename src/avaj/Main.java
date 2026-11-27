@@ -11,7 +11,7 @@ import avaj.exception.*;
 public class Main {
 	private static int simulationRuns = 0;
 
-	private static boolean createAircraft(Scanner sc, ArrayList<Flyable> flyables) {
+	private static void createAircraft(Scanner sc, ArrayList<Flyable> flyables) {
 		String type;
 		String name;
 		int longitude;
@@ -22,8 +22,6 @@ public class Main {
 			if (!sc.hasNext())
 				throw new InvalidFormatException("AIRCRAFT_TYPE", String.class.getSimpleName());
 			type = sc.next();
-			if (type.compareTo("Helicopter") != 0 && type.compareTo("JetPlane") != 0 && type.compareTo("Balloon") != 0)
-				return false;
 
 			if (!sc.hasNext())
 				throw new InvalidFormatException("NAME", String.class.getSimpleName());
@@ -53,8 +51,6 @@ public class Main {
 			e.printStackTrace(System.out);
 			System.exit(1);
 		}
-
-		return true;
 	}
 
 	public static void error(String msg) {
